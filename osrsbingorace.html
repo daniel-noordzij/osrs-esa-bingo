@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OSRS Bingo Race!</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="screen-container">
+		<div class="left-container">
+			<button class="button-29 btn" role="button" onclick="toggleCustomization()" id="btn-customize">Customize</button>
+			<br><br>
+			<div id="layout-buttons-container" style="display:none;">
+				<button class="button-29 btn" role="button" onclick="clearCurrentBoard()" id="btn-copy-layout">Clear Board</button>
+				<br><br>
+				<button class="button-29 btn" role="button" onclick="copyCurrentLayout()" id="btn-copy-layout">Copy Layout</button>
+				<br><br>
+				<button class="button-29 btn" role="button" onclick="pasteNewLayout()" id="btn-paste-layout">Import Layout</button>
+			</div>
+			<div id="other-buttons-container">
+				<button class="button-29 btn" role="button" onclick="toggleInfoModal()" id="btn-info">Rules</button>
+			</div>
+		</div>
+		<div class="middle-container">
+			<div class="bingo-container" id="bingo-container"></div>
+		</div>
+		<div class="right-container"><br></div>
+	</div>
+
+	<div id="task-modal" class="modal">
+		<div class="modal-content">
+			<span class="modal-text modal-header">Select the task to switch this tile to:</span>
+			<br><br>
+			<table class="task-select-table" id="task-select-table"></table>
+			<br>
+			<span class="modal-close" onclick="toggleModal()">&times;</span>
+		</div>
+	</div>
+	<div id="info-modal" class="modal">
+		<div class="modal-content">
+			<h1 class="modal-info-header">Rules & info for the OSRS bingo</h1>
+			<h2>Gear:</h2>
+			<p class="modal-info-text">All gear, including resources/teleports/utilities/etc, must be something both of us have. Anything you have the other doesn't is off-limits.</p>
+			<div class="slideshow-container">
+
+				<div class="mySlides">
+				  <img src="images/max-mage.png" class="slideshow-image" style="width:100%">
+				  <div class="slideshow-text">Max Mage</div>
+				</div>
+
+				<div class="mySlides">
+				  <img src="images/max-range.png" class="slideshow-image" style="width:100%">
+				  <div class="slideshow-text">Max Range</div>
+				</div>
+
+				<div class="mySlides">
+				  <img src="images/max-melee.png" class="slideshow-image" style="width:100%">
+				  <div class="slideshow-text">Max Melee</div>
+				</div>
+				
+				<div class="mySlides">
+				  <img src="images/max-gear.png" class="slideshow-image" style="width:100%">
+				  <div class="slideshow-text">Other Gear</div>
+				</div>
+
+				<a class="slideshow-prev" onclick="plusSlides(-1)">❮</a>
+				<a class="slideshow-next" onclick="plusSlides(1)">❯</a>
+			</div>
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span> 
+				<span class="dot" onclick="currentSlide(2)"></span> 
+				<span class="dot" onclick="currentSlide(3)"></span> 
+				<span class="dot" onclick="currentSlide(4)"></span> 
+			</div>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+			<p class="modal-info-text">extra info</p>
+		</div>
+	</div>
+</body>
+</html>
+<script src="scripts.js"></script>
